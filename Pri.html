@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/yuliya" rel="stylesheet">
+    <title>Special Day</title>
+    <link rel="stylesheet" href="pri.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Initial Message -->
+        <div id="floating-hearts"></div>
+        <div id="initial-box">
+            <div class="message-box">
+                <span class="icon">✨</span>
+                <p class="message-text">Heyy Hermione!!</p>
+            </div>
+        </div>
+    
+        <!-- Special Day Message -->
+        <div id="special-day-box" style="display: none;">
+            <div class="message-box">
+                <span class="icon">✨</span>
+                <p class="message-text">Today's the most special day!</p>
+            </div>
+        </div>
+
+        <!-- Question Box -->
+        <div id="floating-hearts"></div>
+        <div id="question-box" style="display: none;">
+            <div class="message-box">
+                <span class="icon">✨</span>
+                <p class="message-text">Do you want to see what I made for you?</p>
+                <button class="yes-button" onclick="handleOption(true)">Yes!</button>
+                <button class="no-button" onclick="handleOption(false)">No</button>
+            </div>
+            
+            <p id="response-message" style = "font-size: 30px;"></p>
+        </div>
+
+        <!-- Final Message -->
+        <div id="final-box" style="display: none;">
+            <div class="message-box">
+                <span class="icon">✨</span>
+                <p class="message-text" id="final-message">Okay look at it cutie!</p>
+            </div>
+        </div>
+
+        <!-- Lights On -->
+        <div id="light-box" style="display: none;">
+            <button class="action-button" onclick="toggleLights()">Lights On</button>
+        </div>
+
+        <!-- Music -->
+        <div id="music-box" style="display: none;">
+            <button class="action-button" onclick="playMusic()">Music</button>
+            <audio id="romantic-music" src="61. Lauv - I Like Me Better.mp3"></audio>
+        </div>
+       
+        <!-- Image Popup -->
+        <div id="image-box" style="display: none;">
+            <button class="action-button" onclick="showImage()" id = "click">Click Me</button>
+            <div id="image-popup" style="display: none;">
+                <img src="happy.webp" alt="Happy Birthday!" class="popup-image">
+            </div>
+                
+         
+        </div>
+        
+        <!-- Balloons -->
+        <div id="balloons-box" style="display: none;">
+            <button class="action-button" onclick="flyBalloons()">Okay Darling, Let's Fly Balloons</button>
+            <div id="balloons" style = "position: relative;"></div>
+        </div>  
+
+        <!-- Notes -->
+        <div id="notes-box" style="display: none;">
+            <div id="notes-area"></div>
+            <button id="start-notes-button" onclick="startNotes()">I have something to say</button>
+        </div>               
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
