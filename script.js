@@ -32,9 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleOption(yes) {
     
     if (yes) {
-        
-        document.getElementById("question-box").style.display = "none";
-        document.getElementById("floating-hearts").style.display = "none";
+        setTimeout(() => {
+            document.getElementById("floating-hearts").style.display = "none";
+
+        }, 2000);
+        document.getElementById("question-box").style.display = "none"; 
         document.getElementById("final-box").style.display = "block";
 
         setTimeout(() => {
@@ -72,28 +74,31 @@ function flyBalloons() {
     const balloonContainer = document.getElementById("balloons");
     for (let i = 0; i < 12; i++) {
         const balloon = document.createElement("div");
-        balloon.style.left = `${Math.random() * 100}%`;
+        balloon.style.left = `${Math.random() * 100}%`;  // Randomize X position
+        balloon.style.animationDelay = `${Math.random() * 3}s`;  // Stagger balloon animations
+
         balloonContainer.appendChild(balloon);
     }
-    document.getElementById("notes-box").style.display = "block";
+    document.getElementById("notes-box").style.display = "flex";
 }
+
 function startNotes() {
     document.getElementById("balloons-box").style.display = "none";
     document.getElementById("image-box").style.display = "none";
     document.getElementById("start-notes-button").style.display = "none";
     const notes = [
         "Keep on clicking until all the notes are revelead",
-        "You came into my life like randomly but became one of the important person,So first of all thanks for cominhg into my life...",
+        "You came into my life randomly but became one of the important person,So first of all thanks for coming into my life...",
         "Every day and every moment spent with you feel special..its like butterflies in my stomach!!",
         "You have become my home,after all the stress and bad days its you who make my days so good and special!!",
         "Your smile and your beautiful eyes has the power to light up my entire day!!",
-        "I am so grateful to have you in my life. You’re my treasure!! ",
+        "I am so grateful to have you in my life. You’re my treasure!!The most precious one.. ",
         "You are the sunshine on my rainy days and warmth on my cold nights...",
-        "Thanks for not getting bored of this immature child and not judging me and helping me with all the problems!!!",
+        "Thanks for not getting bored of listening this immature child and not judging me and helping me with all the problems!!!",
         "Thank you for being so amazing, kind, and beautiful soul you are...With you, everything feels perfect cause you are so perfect. You make my world complete... ",
         "You are the best Hermione,I could have been keep on writing about you but you have many people's waiting, so I will write them some other day..",
         "You have said not to send you hand written letters or any materliastic things so it's the only idea I had to make your bday special..so hope you like it",
-        "Happy Birthday Priyanka once again....and thanks for being there",
+        "Once again, Happy Birthday Priyanka....and thanks for being there",
     ];
 
     const notesArea = document.getElementById("notes-area");
