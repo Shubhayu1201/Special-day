@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="pri.css">
 </head>
 <body>
-    <div id="container">
+    <div id="container" class = "container">
         <!-- Initial Message -->
         <div id="floating-hearts"></div>
         <div id="initial-box">
@@ -22,12 +22,11 @@
                 <p class="message-text">Heyy Hermione!!</p>
             </div>
         </div>
-    
         <!-- Special Day Message -->
         <div id="special-day-box" style="display: none;">
             <div class="message-box">
                 <span class="icon">✨</span>
-                <p class="message-text">Today's the most special day!</p>
+                <p class="message-text">Today is your special day!</p>
             </div>
         </div>
 
@@ -74,17 +73,19 @@
         </div>
         
         <!-- Balloons -->
-        <div id="balloons-box" style="display: none;">
-            <button class="action-button" onclick="flyBalloons()">Okay Darling, Let's Fly Balloons</button>
+        <div id="balloons-box" style="display: none; justify-content: center;">
+            <button class="action-button" onclick="flyBalloons()">Let's Fly Balloons</button>
             <div id="balloons" style = "position: relative;"></div>
         </div>  
 
         <!-- Notes -->
-        <div id="notes-box" style="display: none;">
+        <div id="notes-box" style="display: none; justify-content: center;">
             <div id="notes-area"></div>
             <button id="start-notes-button" onclick="startNotes()">I have something to say</button>
         </div>               
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
+
