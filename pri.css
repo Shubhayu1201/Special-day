@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: rgb(2, 14, 14);
+    color: rgb(127, 109, 215);
     font-family: 'Arial', sans-serif;
     background-color: rgb(232, 223, 240); /* Updated background */
     overflow: hidden;
@@ -73,15 +73,19 @@ button {
     background: radial-gradient(circle, #ff5f5f, #ff3f3f);
     border-radius: 50%;
     position: absolute;
-    border-radius: 50% 50% 50% 50%;  /* Rounded top edges */
     transform: rotate(-45deg);  /* Tilt to form a heart shape */
     animation: flyingBalloons 4s linear infinite;
 }
 
 @keyframes flyingBalloons {
-    from { transform: translateY(100vh); }
-    to { transform: translateY(-100vh); }
+    from {
+        transform: translateY(100vh);
+    }
+    to {
+        transform: translateY(-100vh);
+    }
 }
+
 
 /* Sticky Note Style */
 .sticky-note {
@@ -187,3 +191,4 @@ button {
         transform: translateX(5px);
     }
 }
+
