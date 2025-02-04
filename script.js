@@ -97,8 +97,9 @@ function startNotes() {
         "Thanks for not getting bored of listening this immature child and not judging me and helping me with all the problems!!!",
         "Thank you for being so amazing, kind, and beautiful soul you are...With you, everything feels perfect cause you are so perfect. You make my world complete... ",
         "You are the best Hermione,I could have been keep on writing about you but you have many people's waiting, so I will write them some other day..",
-        "You have said not to send you hand written letters or any materliastic things so it's the only idea I had to make your bday special..so hope you like it",
-        "Once again, Happy Birthday Priyanka....and thanks for being there",
+        "You have said not to send you hand written letters or any materliastic things so it's the only idea I have to make your bday special..so hope you like it",
+        "I know you are busy with your studies and exam and I know that I disturb you a lot and you get irritated so I wont disturb you..All the best for your exams!!!",
+        "Once again, Happy Birthday Priyanka....and thanks for being there,and I will be there for you whenever you need me!!Byeee Pri",
     ];
 
     const notesArea = document.getElementById("notes-area");
@@ -109,7 +110,7 @@ function startNotes() {
     // Function to display the next note
     const showNextNote = () => {
         if (currentNoteIndex >= notes.length) {
-            notesArea.innerHTML = "<p style='font-size:30px;color:#ff4b5c;'>All notes revealed! 💌</p>";
+            notesArea.innerHTML = "<p style='font-size:30px;color:#ff4b5c;'>All notes revealed! 💌</p><br><p style='font-size:30px;color:#ff4b5c;'>Thanks for reading!.</p>";
             return;
         }
 
