@@ -96,9 +96,8 @@ function startNotes() {
         "I am so grateful to have you in my life.You made me a little mature and better...  You’re my treasure!!The most precious one.. ",
         "Thanks for not getting bored of listening this immature child and not judging me and helping me with all the problems!!!",
         "Thank you for being so amazing, kind, and beautiful soul you are...With you, everything feels perfect cause you are so perfect. You make my world complete... ",
-        "You are the best Hermione,I could have been keep on writing about you but you have many people’s waiting, so I wont take much of your time..",
+        "You are the best Hermione,I could have been keep on writing about you but you might be busy, so I wont take much of your time..",
         "I might not be able to send you hand written letters or any materliastic things but as your friend it’s the only idea I have to make your birthday special....Hope you like it",
-        "It might be inspired but its exclusive for you!!as I made it without the help of any AI..",
         "I know you are stressed with your studies and exam..But I know that you will do good in the exams..All the best for your exams!!!",
         "Once again, Happy Birthday Priyanka....and I will always be there for you whenever you need me!!Byeee Pri",
     ];
