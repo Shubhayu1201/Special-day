@@ -89,17 +89,18 @@ function startNotes() {
     const notes = [
         "Keep on clicking until all the notes are revelead",
         "You came into my life randomly but became one of the important person,So first of all thanks for coming into my life...",
-        "Every day and every moment spent with you feel special..its like butterflies in my stomach!!",
+        "Every day and every moment spent with you feel special..cause you are so special...its like butterflies in my stomach!!",
         "You have become my home,after all the stress and bad days its you who make my days so good and special!!",
         "Your smile and your beautiful eyes has the power to light up my entire day!!",
-        "I am so grateful to have you in my life. You’re my treasure!!The most precious one.. ",
         "You are the sunshine on my rainy days and warmth on my cold nights...",
+        "I am so grateful to have you in my life.You made me a little mature and better...  You’re my treasure!!The most precious one.. ",
         "Thanks for not getting bored of listening this immature child and not judging me and helping me with all the problems!!!",
         "Thank you for being so amazing, kind, and beautiful soul you are...With you, everything feels perfect cause you are so perfect. You make my world complete... ",
-        "You are the best Hermione,I could have been keep on writing about you but you have many people's waiting, so I will write them some other day..",
-        "You have said not to send you hand written letters or any materliastic things so it's the only idea I have to make your bday special..so hope you like it",
-        "I know you are busy with your studies and exam and I know that I disturb you a lot and you get irritated so I wont disturb you..All the best for your exams!!!",
-        "Once again, Happy Birthday Priyanka....and thanks for being there,and I will be there for you whenever you need me!!Byeee Pri",
+        "You are the best Hermione,I could have been keep on writing about you but you have many people’s waiting, so I wont take much of your time..",
+        "I might not be able to send you hand written letters or any materliastic things but as your friend it’s the only idea I have to make your birthday special....Hope you like it",
+        "It might be inspired but its exclusive for you!!as I made it without the help of any AI..",
+        "I know you are stressed with your studies and exam..But I know that you will do good in the exams..All the best for your exams!!!",
+        "Once again, Happy Birthday Priyanka....and I will always be there for you whenever you need me!!Byeee Pri",
     ];
 
     const notesArea = document.getElementById("notes-area");
