@@ -59,10 +59,23 @@ function toggleLights() {
 }
 
 function playMusic() {
-    document.getElementById("romantic-music").play();
+    const music = document.getElementById("romantic-music");
+    music.volume = 0; // Start from silence
+    music.play();
+
+    let volume = 0;
+    const fadeInterval = setInterval(() => {
+        if (volume < 1) {
+            volume += 0.05; // Increase volume gradually
+            music.volume = volume;
+        } else {
+            clearInterval(fadeInterval); // Stop increasing volume once maxed out
+        }
+    }, 200); // Adjust timing for smoother fade
     document.getElementById("music-box").style.display = "none";
     document.getElementById("image-box").style.display = "block";
 }
+
 
 function showImage() {
     document.getElementById("image-popup").style.display="block";
@@ -96,9 +109,9 @@ function startNotes() {
         "I am so grateful to have you in my life.You made me a little mature and better...  You’re my treasure!!The most precious one.. ",
         "Thanks for not getting bored of listening this immature child and not judging me and helping me with all the problems!!!",
         "Thank you for being so amazing, kind, and beautiful soul you are...With you, everything feels perfect cause you are so perfect. You make my world complete... ",
-        "You are the best Hermione,I could have been keep on writing about you but you might be busy, so I wont take much of your time..",
-        "I might not be able to send you hand written letters or any materliastic things but as your friend it’s the only idea I have to make your birthday special....Hope you like it",
-        "I know you are stressed with your studies and exam..But I know that you will do good in the exams..All the best for your exams!!!",
+        "You are the best Hermione,I could have been keep on writing about you but you have many people’s waiting, so I will write them some other day..",
+        "I wanted to make something special for your birthday...so, I studied a whole new thing for the past few days to make it on my own without the help of AI..It is not perfect but its exclusive for you!!..Hope you like it",
+        "I know you are stressed with your studies and exam..But I believe that you will do good in the exams..All the best for your exams!!!",
         "Once again, Happy Birthday Priyanka....and I will always be there for you whenever you need me!!Byeee Pri",
     ];
 
@@ -110,7 +123,7 @@ function startNotes() {
     // Function to display the next note
     const showNextNote = () => {
         if (currentNoteIndex >= notes.length) {
-            notesArea.innerHTML = "<p style='font-size:30px;color:#ff4b5c;'>All notes revealed! 💌</p><br><p style='font-size:30px;color:#ff4b5c;'>Thanks for reading!.</p>";
+            notesArea.innerHTML = "<p style='font-size:30px;color:#ff4b5c;'>All notes revealed! 💌</p><br><p style='font-size:30px;color:#ff4b5c;'>Thanks for reading</p>";
             return;
         }
 
@@ -118,22 +131,20 @@ function startNotes() {
         const note = document.createElement("div");
         note.className = "sticky-note slide-in";
         note.textContent = notes[currentNoteIndex];
+        notesArea.innerHTML = "";  // This ensures only one note appears at a time
         notesArea.appendChild(note);
+        
 
         // Add click handler for the note
         note.onclick = () => {
             note.classList.remove("slide-in");
             note.classList.add("slide-out");
 
-            // Wait for the animation to complete, then show the next note
             setTimeout(() => {
-                notesArea.removeChild(note);
-                currentNoteIndex++;
+                currentNoteIndex++;  // ✅ Move to the next note
                 showNextNote();
-            }, 500); // Match animation duration
+            }, 600);
         };
-    };
-
-    // Start with the first note
-    showNextNote();
+    }
+    showNextNote(); // Start showing notes
 }
